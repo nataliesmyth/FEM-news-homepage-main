@@ -1,0 +1,279 @@
+:root {
+  /* colors */
+  --clr-primary-dark: 5 85 63;
+  --clr-primary-light: 35 77 63;
+  --clr-dark: 240 100% 5;
+  --clr-light: 36 100 99;
+  --clr-white: 0 0 100;
+  --clr-neutral-light: 233 8 79;
+  --clr-neutral-dark: 236 13 42;
+
+  /* font size */
+  --fs-large: 2.5rem;
+  --fs-small: 0.9375rem;
+
+  /* font weight */
+  --fw-light: 400;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+}
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--fs-small);
+}
+
+.sr-only {
+  position: absolute; 
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px; 
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content {
+  position: absolute;
+  z-index: 9999;
+  background: hsl( var(--clr-white) );
+  color: hsl( var(--clr-dark) );
+  padding: .5em 1em;
+  margin-inline: auto;
+  transform: translateY(-100%);
+  transition: 250ms ease-in;
+}
+
+.skip-to-content:focus {
+  transform: translateY(0);
+}
+
+.hidden {
+  display: none;
+}
+
+main > * {
+  margin-top: 1em;
+}
+
+h1 {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-extra-bold);
+}
+
+h2 {
+  font-size: 2rem;
+  color: hsl(var(--clr-primary-light));
+}
+
+h3 {
+  font-size: 2rem;
+  color: hsl(var(--clr-primary-dark));
+  margin: 0;
+}
+
+h4 {
+  font-size: 1.5rem;
+  color: hsl( var(--clr-light) );
+}
+
+p {
+  font-weight: var(--fw-light);
+  color: hsl(var(--clr-neutral-dark));
+}
+
+.header {
+  margin-block: 2rem;
+}
+
+.nav {
+  display: none;
+}
+
+.logo {
+  width: 45px;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.call-to-action {
+  display: inline-block;
+  background-color: hsl(var(--clr-primary-dark));
+  color: hsl(var(--clr-dark));
+  margin-block-end: 2rem;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  letter-spacing: .25rem;
+}
+
+aside {
+  margin-block: 1.5rem;
+  padding: 0.75em;
+  background-color: hsl(var(--clr-dark));
+}
+
+.aside-card > p {
+  color: hsl( var(--clr-neutral-light) );
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.mobile-nav-toggle {
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  right: 1rem;
+  top: 1.6rem;
+  background: transparent;
+  background-image: url(./assets/images/icon-menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 0;
+}
+
+.mobile-nav-toggle[aria-expanded='true'] {
+  background-image: url(./assets/images/icon-menu-close.svg);
+}
+
+/* add white border when using keyboard tab to access mobile nav, but not on */
+.mobile-nav-toggle:focus-visible {
+  outline: 5px solid white;
+  outline-offset: 5px;
+}
+
+.footer-card {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-block: 3em;
+}
+
+.text {
+  width: 60%;
+}
+
+.text > h4 {
+  color: hsl( var(--clr-dark) );
+  font-size: 18px;
+  margin: 0;
+}
+
+.text > p {
+  color: hsl(var(--clr-neutral-dark));
+}
+
+.footer-img {
+  max-width: 100%;
+  width: 100px;
+}
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: 1rem;
+}
+
+.border-bottom {
+  border-bottom: 1px solid hsl(var(--clr-neutral-dark));
+}
+
+
+@media (min-width: 35rem) {
+  .mobile-nav-toggle {
+    display: none;
+  }
+
+
+  .nav > ul {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+}
