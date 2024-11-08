@@ -163,10 +163,13 @@ p {
   margin-block: 2rem;
 }
 
-.nav {
+/* .nav {
+  display: none;
+} */
+
+.primary-navigation[data-visible='false'] {
   display: none;
 }
-
 .logo {
   width: 45px;
 }
