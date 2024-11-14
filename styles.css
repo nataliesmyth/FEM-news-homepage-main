@@ -161,6 +161,7 @@ h4 {
 p {
   font-weight: var(--fw-light);
   color: hsl(var(--clr-neutral-dark));
+  line-height: 2;
 }
 
 .header {
@@ -273,9 +274,9 @@ aside {
   color: hsl(var(--clr-neutral-dark));
 }
 
-.footer-img-container {
+/* .footer-img-container {
   width: 30%;
-}
+} */
 
 .footer-img {
   max-width: 100%;
