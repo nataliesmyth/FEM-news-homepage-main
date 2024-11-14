@@ -217,6 +217,10 @@ aside {
   color: hsl( var(--clr-neutral-light) );
 }
 
+.aside-link {
+  color: hsl( var(--clr-light) );
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
@@ -266,6 +270,10 @@ aside {
 .footer-img {
   max-width: 100%;
   width: 100%;
+}
+
+.footer-link {
+  color: hsl( var(--clr-dark) );
 }
 
 .flow > *:where(:not(:first-child)) {
@@ -318,13 +326,14 @@ aside {
 
   .text {
     width: 100%;
+    max-width: 50ch;
     grid-area: text;
   }
 
   .call-to-action {
     grid-area: button;
-    margin-block-end: 0;
-    width: 50%;
+    /* margin-block-end: 0; */
+    width: 55%;
   }
 
   .call-to-action:hover {
@@ -342,6 +351,7 @@ aside {
   aside {
     margin-block: 0;
     grid-area: aside;
+    max-width: 350px;
   }
 
   main > * {
@@ -378,20 +388,12 @@ aside {
     padding-block: .25rem;
   }
 
-  .aside-link {
-    color: hsl( var(--clr-light) );
-  }
-
   .aside-link:hover {
     color: hsl( var(--clr-primary-light));
   }
   
   footer {
     display: flex;
-  }
-
-  .footer-link {
-    color: hsl( var(--clr-dark) );
   }
   
   .footer-link:hover {
