@@ -241,7 +241,7 @@ aside {
   display: block;
   position: absolute;
   z-index: 2000;
-  right: 1rem;
+  right: 2rem;
   top: 1.6rem;
   background: transparent;
   background-image: url(./assets/images/icon-menu.svg);
