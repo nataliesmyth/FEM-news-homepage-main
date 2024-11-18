@@ -206,7 +206,6 @@ a {
   width: 60%;
   background-color: hsl(var(--clr-primary-dark));
   color: hsl(var(--clr-dark));
-  /* margin-block-end: 2rem; */
   padding: 1rem 2rem;
   text-align: center;
   text-transform: uppercase;
@@ -260,7 +259,6 @@ aside {
 .footer-card {
   display: flex;
   gap: 1.25rem;
-  /* justify-content: center; */
   align-items: center;
   margin-block: 3em;
 }
@@ -295,7 +293,6 @@ aside {
 @supports (backdrop-filter: blur(1.5rem)) {
   body {
       background: hsl( var(--clr-neutral-dark) / .05);
-      /* backdrop-filter: blur(1.5rem); */
   }
 }
 
@@ -422,6 +419,11 @@ aside {
   }
   
   footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
     display: flex;
   }
   
