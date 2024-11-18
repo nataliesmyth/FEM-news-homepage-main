@@ -171,7 +171,7 @@ p {
   color: hsl( var(--clr-dark) );
 }
 
-@media (max-width: 56.25rem) {
+@media (max-width: 62.5rem) {
 
   .primary-navigation {
     position: fixed;
@@ -181,7 +181,7 @@ p {
     padding: min(20rem, 20vh) 2rem;
     font-size: 1.125rem;
     line-height: 3;
-    box-shadow: -10em 0 .4em hsl( var(--clr-dark) / .5);
+    box-shadow: -10em 0 .4em 10em hsl( var(--clr-dark) / .5);
   }
 }
 
@@ -384,8 +384,8 @@ aside {
   }
 
   .primary-navigation[data-visible='false'] {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .primary-navigation > li:hover {
