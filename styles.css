@@ -347,14 +347,6 @@ a {
     display: none;
   }
 
-  .grid-item1 {
-    display: grid;
-    grid-template-areas: 
-    'img img'
-    'title text'
-    'title button';
-  }
-
   .desktop-img {
     display: block;
     grid-area: img;
@@ -444,5 +436,15 @@ a {
   
   .footer-link:hover {
     color: hsl( var(--clr-primary-dark));
+  }
+}
+
+@media (min-width: 1400px) {
+  .grid-item1 {
+    display: grid;
+    grid-template-areas: 
+    'img img'
+    'title text'
+    '. button';
   }
 }
