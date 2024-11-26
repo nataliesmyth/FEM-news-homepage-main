@@ -179,6 +179,7 @@ p {
 
 .grid-item-last-child {
   margin-block-start: 3em;
+  grid-area: last-child
 }
 
 .footer-text > h4 {
@@ -346,6 +347,14 @@ a {
     display: none;
   }
 
+  .grid-item1 {
+    display: grid;
+    grid-template-areas: 
+    'img img'
+    'title text'
+    'title button';
+  }
+
   .desktop-img {
     display: block;
     grid-area: img;
@@ -394,9 +403,8 @@ a {
     display: grid;
     /* gap: 1.25rem; */
     grid-template-areas:
-    'img img aside .'
-    'title text aside .'
-    'title button aside .';
+    'img aside'
+    'last-child last-child';
   }
 
   .primary-navigation[data-visible='false'] {
